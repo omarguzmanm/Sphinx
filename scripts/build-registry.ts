@@ -31,7 +31,7 @@ components.forEach((component) => {
       schema.files.push({
         path: fileDef.target,
         content: content,
-        type: component.type
+        type: fileDef.type || component.type 
       });
     });
 
