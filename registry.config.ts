@@ -6,8 +6,13 @@ export const components: Registry = [
     type: "registry:ui",
     files: [
       {
-        path: "src/components/MagicCard.vue",
+        path: "src/components/magic-card/MagicCard.vue",
         target: "components/ui/magic-card/MagicCard.vue",
+        type: "registry:ui"
+      },
+      {
+        path: "src/components/magic-card/index.ts",
+        target: "components/ui/magic-card/index.ts",
         type: "registry:ui"
       }
     ],
