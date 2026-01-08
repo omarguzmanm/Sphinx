@@ -1,0 +1,19 @@
+{
+  "name": "magic-card",
+  "type": "components:ui",
+  "dependencies": [
+    "lucide-vue-next",
+    "@vueuse/core"
+  ],
+  "registryDependencies": [
+    "button",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "components/ui/magic-card/MagicCard.vue",
+      "content": "<script setup lang=\"ts\">\nimport { cn } from '@/lib/utils'\nimport type { HTMLAttributes } from 'vue'\n\n// Extendemos los atributos nativos de HTML para tener intellisense\ninterface Props {\n  title: string\n  class?: HTMLAttributes['class'] // Tipado correcto para clases de Tailwind\n}\n\nconst props = defineProps<Props>()\n</script>\n\n<template>\n  <div \n    :class=\"cn(\n      'p-6 border rounded-xl shadow-sm bg-card text-card-foreground',\n      'hover:shadow-md transition-all duration-200',\n      props.class\n    )\"\n  >\n    <h3 class=\"font-semibold text-lg tracking-tight mb-2\">\n      {{ title }}\n    </h3>\n    <div class=\"text-sm text-muted-foreground\">\n      <slot />\n    </div>\n  </div>\n</template>",
+      "type": "components:ui"
+    }
+  ]
+}
