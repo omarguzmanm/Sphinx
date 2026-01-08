@@ -1,1 +1,1 @@
-export {default as MagicCard} from './MagicCard.vue';
+export { default as MagicCard } from './MagicCard.vue';

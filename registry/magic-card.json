@@ -17,7 +17,7 @@
     },
     {
       "path": "components/ui/magic-card/index.ts",
-      "content": "",
+      "content": "export { default as MagicCard } from './MagicCard.vue';",
       "type": "registry:ui"
     }
   ]
